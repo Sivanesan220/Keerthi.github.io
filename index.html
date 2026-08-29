@@ -1,416 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Door2Door | Premium Mobile Car Wash & Detailing</title>
-    <link rel="icon" sizes="16*16" href="images/logo.JPG">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Keerthi! 🎉</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #a1c4fd 100%);
+      --accent-pink: #ff4081;
+      --accent-yellow: #ffd54f;
+      --card-bg: rgba(255, 255, 255, 0.85);
+    }
+
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background: var(--bg-gradient);
+      background-size: 400% 400%;
+      animation: gradientShift 12s ease infinite;
+      overflow-x: hidden;
+      color: #333;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating Balloons */
+    .balloon-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 50px;
+      height: 65px;
+      border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+      animation: floatUp 8s linear infinite;
+    }
+
+    .balloon::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 23px;
+      width: 2px;
+      height: 15px;
+      background: rgba(0,0,0,0.2);
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-120vh) rotate(20deg); opacity: 0; }
+    }
+
+    /* Hero Styling */
+    .hero-title {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      color: var(--accent-pink);
+      text-shadow: 3px 3px 0px #fff, 6px 6px 0px rgba(0,0,0,0.1);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Memory Gallery */
+    .memory-img {
+      height: 240px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .memory-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .memory-card:hover .memory-img {
+      transform: scale(1.08);
+    }
+
+    /* Interactive Surprise Button */
+    .btn-surprise {
+      background: linear-gradient(45deg, #ff4081, #ff80ab);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 35px;
+      font-size: 1.2rem;
+      box-shadow: 0 5px 20px rgba(255, 64, 129, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn-surprise:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #ff80ab, #ff4081);
+      color: #fff;
+    }
+  </style>
 </head>
-
 <body>
-    <!-- <div id="preloader">
-        <div class="loader-content">
-            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDY4bTY1b2MzeHkyaXRhN3d6NnlveHRwMXV5YjB6a3J4bWxlaWdoMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/578A2LSxMlOtPzI48H/giphy.gif"
-                alt="Loading..." class="loader-gif">
-            <h5 class="text-uppercase mt-3 fw-bold loader-text">Door2Door Durai Car Wash</h5>
-        </div>
-    </div> -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <span class="text-brand-cyan fs-3 fw-800">DOOR2</span><span
-                    class="text-brand-orange fs-3 fw-800">DOOR</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a href="tel:+919486282381" class="btn btn-booking btn-sm">Call Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <header class="hero-v2 d-flex align-items-center">
-        <div class="container">
-            <div class="row justify-content-center justify-content-lg-start">
-                <div class="col-lg-7">
-                    <div class="hero-glass-card overflow-hidden my-4 my-md-0">
-                        <h1 class="text-brand-orange fw-bold text-uppercase mb-2 tracking-widest"
-                            style="font-size: 12px;" data-aos="fade-right" data-aos-duration="1800" data-aos-delay="100">Door2Door Premium car wash in <br> nagercoil and kanniyakumari</h1>
-                        <h2 class="display-3 fw-bold mb-3 text-white"  data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="300">
-                            Showroom Shine <br>
-                            <span class="text-brand-cyan">At Your Step</span>
-                        </h2>
-                        <p class="lead mb-4 text-white-50"  data-aos="fade-left" data-aos-duration="3000" data-aos-delay="100">
-                            The #1 Mobile Car Spa in <strong>Nagercoil & Kanyakumari</strong>. Professional detailing
-                            brought directly to your doorstep.
-                        </p>
+  <div class="balloon-container" id="balloonContainer"></div>
 
-                        <div class="row mt-2 mt-md-0 g-4 justify-content-center justify-content-md-start">
-                            <div class="col-10 col-md-4"  data-aos="fade-right" data-aos-duration="1800" data-aos-delay="100">
-                                <a href="tel:+919486282381"
-                                    class="btn btn-orange text-white px-4 py-3 border rounded border-end border-white fw-bold w-100">
-                                    <i class="fa-solid fa-arrow-right"></i> Explore
-                                </a>
-                            </div>
-                            <div class="col-10 col-md-4"  data-aos="fade-left" data-aos-duration="1800" data-aos-delay="100">
-                                <a href="https://wa.me/919486282381"
-                                    class="btn bg-cyan text-white px-4 py-3 border border-white rounded fw-bold w-100">
-                                    <i class="fa-solid fa-phone"> </i> Call
-                                </a>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+  <main class="container py-5">
+    <header class="text-center my-4">
+      <span class="badge rounded-pill bg-warning text-dark px-3 py-2 fs-6 mb-2">✨ Today is Special! AUG 29 ✨</span>
+      <h1 class="hero-title">Happy Birthday Keerthi!</h1>
+      
+      <p class="fs-5 text-secondary">Wishing you a day filled with endless joy, laughter, and sweet moments!</p>
     </header>
-    <section id="about-us" class="py-5 bg-white ">
-        <div class="container py-lg-5">
-            <div class="row align-items-center g-4">
 
-                <div class="col-lg-6 ">
-                    <div class="position-relative" data-aos="zoom-in" data-aos-duration="1800">
-                        <img src="images/hero.png" style="width: 100%;" alt="Professional Car Detailing"
-                            class=" rounded-4 shadow-lg" loading="lazy">
-
-                        <div
-                            class="position-absolute top-0 start-0 bg-cyan text-white p-3 rounded-3 shadow m-3 d-none d-md-block">
-                            <span class="h4 fw-bold mb-0">100%</span>
-                            <p class="small mb-0">Quality Guaranteed</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 ">
-                    <div class="ps-lg-4">
-                        <h6 class="text-orange fw-bold text-uppercase mb-2 tracking-wider" data-aos="zoom-in" data-aos-duration="1800">Know Our Story</h6>
-                        <h2 class="display-5 fw-bold mb-4" data-aos="fade-up"  data-aos-duration="1800">The Best Mobile Car Spa in <span
-                                class="text-cyan">Nagercoil</span> </h2>
-
-                        <p class="text-muted mb-4 lead text-justify" data-aos="fade-right"  data-aos-duration="1800">
-                            At <strong class="text-cyan">Door2Door</strong>, we bring professional-grade car detailing
-                            directly to your
-                            home or office. No more waiting in long queues at the wash station—we provide a premium
-                            experience while you relax.
-                        </p>
-
-                        <p class="text-muted mb-4 text-justify" data-aos="fade-left"  data-aos-duration="1800">
-                            As a proud of <strong class="text-orange">Durai Car Wash </strong> network, we
-                            specialize in eco-friendly steam cleaning and high-end detailing. Whether you are in
-                            <strong class="text-cyan">Kanyakumari</strong> or <strong
-                                class="text-cyan">Nagercoil</strong>, our mission is to provide the
-                            highest level of care for your vehicle using pH-neutral products and advanced technology
-                            that protects your car’s paint and interior.
-                        </p>
-
-                        <div class="mb-5 row">
-                            <div class="col-12 col-md-4" data-aos="zoom-in"  data-aos-duration="1800" >
-                                <div class="d-flex align-items-center">
-                                    <i class="fas fa-check-circle text-orange me-2"></i>
-                                    <span class="fw-semibold">Quality Staff</span>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4"  data-aos="zoom-in" data-aos-delay="200"  data-aos-duration="1800">
-                                <div class="d-flex align-items-center">
-                                    <i class="fas fa-check-circle text-orange me-2"></i>
-                                    <span class="fw-semibold">Doorstep Service</span>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4"  data-aos="zoom-in" data-aos-delay="300"  data-aos-duration="1800">
-                                <div class="d-flex align-items-center">
-                                    <i class="fas fa-check-circle text-orange me-2"></i>
-                                    <span class="fw-semibold">Customer Satisfy</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-column flex-md-row justify-content-between g-4">
-
-                            <a href="services.html"
-                                class="btn bg-cyan text-white px-5 py-3 rounded-pill fw-bold shadow" data-aos="fade-right">
-                                Our Services <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
-
-                            <div
-                                class="d-inline-flex align-items-center bg-orange rounded-pill shadow overflow-hidden mt-2 mt-md-0 " data-aos="fade-left">
-                                <a href="tel:+919486282381"
-                                    class="btn btn-orange text-white px-4 py-3 border-0 rounded-0 border-end border-white-50 fw-bold">
-                                    <i class="fa-solid fa-phone"></i> Call
-                                </a>
-                                <a href="https://wa.me/919486282381"
-                                    class="btn btn-orange text-white px-4 py-3 border-0 rounded-0 fw-bold">
-                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="about" class="py-5 bg-white">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h6 class="text-orange fw-bold text-uppercase" data-aos="zoom-in">The Door2Door Advantage</h6>
-                <h2 class="display-5 fw-bold text-brand-orange" data-aos="fade-up" data-aos-duration="1500"  >Why <span class="text-cyan">Choose Us</span></h2>
-                <p class="text-muted mx-auto" style="max-width: 600px;" data-aos="fade-down" data-aos-duration="1500">We combine convenience with premium care to
-                    ensure your vehicle gets the best treatment in Dubai.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-duration="1800">
-                    <div class="p-4 text-center border-0 shadow-sm rounded-4 h-100 bg-light">
-                        <div class="mb-3 text-cyan fs-1"><i class="fas fa-map-marked-alt"></i></div>
-                        <h4 class="fw-bold">Doorstep Service</h4>
-                        <p class="text-muted">No more waiting in queues. Our fully equipped mobile unit comes to your
-                            home or office.</p>
-                    </div>
-                </div>
-                <div class="col-md-4"  data-aos="fade-up" data-aos-delay="200"  data-aos-duration="1800">
-                    <div class="p-4 text-center border-0 shadow-sm rounded-4 h-100 bg-light">
-                        <div class="mb-3 text-orange fs-1"><i class="fas fa-gem"></i></div>
-                        <h4 class="fw-bold">Premium Products</h4>
-                        <p class="text-muted">We use only pH-neutral shampoos and high-grade 3M waxes to protect your
-                            car's paint.</p>
-                    </div>
-                </div>
-                <div class="col-md-4"  data-aos="fade-up" data-aos-delay="300"  data-aos-duration="1800">
-                    <div class="p-4 text-center border-0 shadow-sm rounded-4 h-100 bg-light">
-                        <div class="mb-3 text-cyan fs-1"><i class="fas fa-leaf"></i></div>
-                        <h4 class="fw-bold">Eco-Friendly</h4>
-                        <p class="text-muted">Our specialized steam technology uses 90% less water than traditional
-                            pressure washing.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-5 bg-dark text-white">
-        <div class="container">
-            <div class="row text-center g-4">
-                <div class="col-6 col-md-3">
-                    <h2 class="display-4 fw-bold text-orange">2k+</h2>
-                    <p class="text-secondary text-uppercase small">Cars Washed</p>
-                </div>
-                <div class="col-6 col-md-3">
-                    <h2 class="display-4 fw-bold text-cyan">15+</h2>
-                    <p class="text-secondary text-uppercase small">Expert Detailers</p>
-                </div>
-                <div class="col-6 col-md-3">
-                    <h2 class="display-4 fw-bold text-orange">100%</h2>
-                    <p class="text-secondary text-uppercase small">Satisfaction</p>
-                </div>
-                <div class="col-6 col-md-3">
-                    <h2 class="display-4 fw-bold text-cyan">24/7</h2>
-                    <p class="text-secondary text-uppercase small">Online Booking</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-5 bg-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Common <span class="text-brand-orange">Questions</span></h2>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="accordion accordion-flush shadow-sm border rounded-4 overflow-hidden" id="faqAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#q1">
-                                    What do I need to provide for the service?
-                                </button>
-                            </h2>
-                            <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    To provide you with the most affordable and efficient service, we request that
-                                    customers provide **access to a water tap and a standard power outlet**. This helps
-                                    us keep our service prices low while delivering
-                                    professional results.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q2">
-                                    How long does a Premium Spa service take?
-                                </button>
-                            </h2>
-                            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Typically, a Premium Spa takes between 60 to 90 minutes depending on the vehicle's
-                                    condition.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q3">
-                                    Are the chemicals safe for my car's paint?
-                                </button>
-                            </h2>
-                            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    Absolutely. We use only pH-neutral shampoos and 3M premium waxes that are designed
-                                    to protect and enhance your vehicle's finish.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-5 bg-white">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h6 class="text-orange fw-bold text-uppercase" data-aos="fade-up">Customer Stories</h6>
-                <h2 class="fw-bold fs-1" data-aos="fade-right" data-aos-duration="1800">What Our <span class="text-cyan">Clients Say</span></h2>
-                <div class="d-flex justify-content-center align-items-center mt-2" data-aos="fade-left" data-aos-duration="1800">
-                    <img src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png" alt="Google"
-                        style="width: 24px;" class="me-2"> <span class="fw-bold">4.9/5 Rating on Google</span>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1800">
-                    <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold"
-                                style="width: 45px; height: 45px;">B</div>
-                            <div class="ms-3">
-                                <h6 class="mb-0 fw-bold">Buvi Satheesh</h6>
-                                <small class="text-muted">2 reviews • 2 photos</small>
-                            </div>
-                        </div>
-                        <div class="text-warning mb-2 small" >
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-dark small mb-0">"Awesome service! 🚗💦 Got my car sparkling clean at my
-                            doorstep. Booked in minutes, and the team was super professional. Highly recommend! 😊"</p>
-                        <div class="mt-3 text-muted" style="font-size: 0.75rem;">3 months ago</div>
-                    </div>
-                </div>
-
-                <div class="col-md-4"  data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="200">
-                    <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold"
-                                style="width: 45px; height: 45px;">R</div>
-                            <div class="ms-3">
-                                <h6 class="mb-0 fw-bold">RAKESH KUMAR</h6>
-                                <small class="text-orange small fw-bold"><i class="fas fa-certificate me-1"></i>Local
-                                    Guide</small>
-                            </div>
-                        </div>
-                        <div class="text-warning mb-2 small">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-dark small mb-0">"🏍️ Doorstep bike and car wash super service! Time save
-                            aaguthu, neat cleaning, reasonable price. Bike new maari shine aagudhu.. Nagercoil and
-                            Kanyakumari peoples use it."</p>
-                        <div class="mt-3 text-muted" style="font-size: 0.75rem;">3 months ago</div>
-                    </div>
-                </div>
-
-                <div class="col-md-4"  data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="300">
-                    <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-light">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold"
-                                style="width: 45px; height: 45px;">D</div>
-                            <div class="ms-3">
-                                <h6 class="mb-0 fw-bold">Dayananda Kumar</h6>
-                                <small class="text-muted">1 review • 2 photos</small>
-                            </div>
-                        </div>
-                        <div class="text-warning mb-2 small">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-dark small mb-0">"Excellent car wash service! My car looked spotless inside and
-                            out, with great attention to detail. Mr. Durai was friendly and professional. Highly
-                            recommended for anyone looking for quality car care."</p>
-                        <div class="mt-3 text-muted" style="font-size: 0.75rem;">8 months ago</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-4">
-                <a href="https://maps.app.goo.gl/gcqS8pXaMgs4hkTD8"
-                    class="btn btn-sm btn-outline-secondary rounded-pill">View all Google reviews</a>
-            </div>
-        </div>
+    <section class="text-center my-5">
+      <button class="btn btn-surprise" onclick="triggerSurprise()">Tap For A Surprise! 🎁</button>
+      <div id="surpriseMessage" class="glass-card p-4 mt-4 d-none">
+        <h3 class="text-danger fw-bold">🎂 Wish you many more happy returns of the day Moleyyyyyyyy! 🎂</h3>
+        <img src="/IMG-20260823-WA0058.jpg" style="height: auto; width: 100%;" alt="">
+        <p class="lead mb-0">May your year ahead be as vibrant, wonderful, and amazing as you are!</p>
+      </div>
     </section>
 
-    <footer class="bg-dark text-white pt-5 pb-3" id="contact">
-        <div class="container">
-            <div class="row g-4 mb-4">
-                <div class="col-md-4">
-                    <h4 class="fw-bold mb-3"><span class="text-cyan">Durai </span><span class="text-orange">Car
-                            Wash</span>
-                    </h4>
-                    <p class="text-secondary">Providing premium mobile car care across kanyakumari,Nagercoil since 2024.
-                    </p>
-                    <div class="d-flex gap-3">
-                        <a href="https://www.youtube.com/@chermandurai3260" target="_blank" class="text-danger"><i
-                                class="fab fa-youtube fa-lg"></i></a>
-                        <a href="https://www.instagram.com/door2door_durai_car_wash/" target="_blank"
-                            style="color: #ee2a7b;"><i class="fab fa-instagram fa-lg "></i></a>
-                        <a href="https://wa.me/+919486282381" target="_blank" class="text-success"><i
-                                class="fab fa-whatsapp fa-lg"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="fw-bold mb-3">Our Services</h5>
-                    <ul class="list-unstyled text-secondary">
-                        <li class="mb-2">Auto Detailing</li>
-                        <li class="mb-2">Car Polishing & Waxing</li>
-                        <li class="mb-2">Scratch Removal</li>
+    <section class="my-5">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold text-dark">📸 Beautiful Memories</h2>
+        <p class="text-muted">A collection of special moments</p>
+      </div>
 
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="fw-bold mb-3">Contact Us</h5>
-                    <p class="text-secondary mb-1"><i class="fas fa-map-marker-alt text-orange me-2"></i>Jodaniel Street
-                        Palpanai Nageroil, 359/89, Jothi St, Christhunager, Nagercoil, Tamil Nadu 629003</p>
-                    <p class="text-secondary mb-1"><i class="fas fa-envelope text-orange me-2"></i>
-                        chermandurai97@gmail.com</p>
-                    <p class="text-secondary"><i class="fas fa-phone-alt text-orange me-2"></i> +91 94862 82381</p>
-                </div>
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="glass-card p-3 memory-card">
+            <img src="/1.jpg" class="img-fluid memory-img w-100" alt="Memory 1">
+            <div class="mt-3 text-center">
+              <h5 class="fw-bold mb-1">Unforgettable Moments</h5>
+              <small class="text-muted">Replace image src later in HTML</small>
             </div>
-            <hr class="bg-secondary">
-            <p class="text-center text-secondary small mb-0">&copy; 2026 Door2Door Dubai Car Wash. All Rights Reserved.
-            </p>
+          </div>
         </div>
-    </footer>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-  AOS.init();
-</script>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="glass-card p-3 memory-card">
+            <img src="/2.jpg" class="img-fluid memory-img w-100" alt="Memory 2">
+            <div class="mt-3 text-center">
+              <h5 class="fw-bold mb-1">Pure Joy</h5>
+              <small class="text-muted">Replace image src later in HTML</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="glass-card p-3 memory-card">
+            <img src="/3.jpg" class="img-fluid memory-img w-100" alt="Memory 3">
+            <div class="mt-3 text-center">
+              <h5 class="fw-bold mb-1">Best Memories</h5>
+              <small class="text-muted">Replace image src later in HTML</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="glass-card p-3 memory-card">
+            <img src="/4.jpg" class="img-fluid memory-img w-100" alt="Memory 3">
+            <div class="mt-3 text-center">
+              <h5 class="fw-bold mb-1">Best Memories</h5>
+              <small class="text-muted">Replace image src later in HTML</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="glass-card p-3 memory-card">
+            <img src="/5.jpg" class="img-fluid memory-img w-100" alt="Memory 3">
+            <div class="mt-3 text-center">
+              <h5 class="fw-bold mb-1">Best Memories</h5>
+              <small class="text-muted">Replace image src later in HTML</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  
+  <script>
+    // Generate Floating Balloons
+    const colors = ['#ff4081', '#ffd54f', '#40c4ff', '#b388ff', '#69f0ae'];
+    const container = document.getElementById('balloonContainer');
+
+    for (let i = 0; i < 15; i++) {
+      const balloon = document.createElement('div');
+      balloon.className = 'balloon';
+      balloon.style.left = `${Math.random() * 100}%`;
+      balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      balloon.style.animationDelay = `${Math.random() * 8}s`;
+      balloon.style.animationDuration = `${6 + Math.random() * 4}s`;
+      container.appendChild(balloon);
+    }
+
+    // Surprise Button Action
+    function triggerSurprise() {
+      const msg = document.getElementById('surpriseMessage');
+      msg.classList.remove('d-none');
+      
+      // Fire Confetti Explosion
+      confetti({
+        particleCount: 120,
+        spread: 80,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
 </body>
-
 </html>
